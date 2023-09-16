@@ -1,0 +1,20 @@
+Creating EC2 Cluster with Load Balancer and Elastic IP
+
+    Create an Amazon VPC: Log in to the AWS Management Console and create a new VPC with a CIDR block (e.g., 10.0.0.0/16) 
+    .
+    Create Subnets: Create at least two subnets in different Availability Zones within the VPC to ensure high availability5
+    .
+    Create a Security Group: Create a security group for your EC2 instances, allowing inbound traffic on ports required by your application (e.g., 80 for HTTP, 443 for HTTPS) 
+    .
+    Launch EC2 Instances: Launch EC2 instances in the created subnets, ensuring that they are associated with the security group created in the previous step4
+    .
+    Install Required Software: Install the necessary software on the EC2 instances, such as a web server (e.g., Apache or Nginx) and your e-commerce application.
+    Create an Elastic Load Balancer: In the AWS Management Console, create a Classic Load Balancer, and configure it to distribute traffic between the EC2 instances4
+    .
+    Configure Health Checks: Set up health checks for the load balancer to monitor the health of the EC2 instances and route traffic only to healthy instances
+    .
+    Create an Elastic IP: Allocate a new Elastic IP address in the AWS Management Console, and associate it with the load balancer
+    .
+    Update DNS Records: Update your domain's DNS records to point to the Elastic IP address associated with the load balancer.
+
+By following these steps, you will have created an EC2 cluster with a load balancer and elastic IP, ensuring high availability for your e-commerce application. The next steps in the implementation process involve automating the provisioning of EC2 instances using Ansible, Chef, or Puppet, installing Docker and Kubernetes on the cluster, implementing network policies for database and front-end application pods, creating a new user with pod management permissions, configuring the application on the pod, and setting up automatic scaling and configuration based on CPU/memory usage.

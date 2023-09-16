@@ -1,0 +1,71 @@
+Implementation Requirements
+
+Create the cluster
+AWS: Create an EC2 instance and an Elastic Load Balancer (ELB). Assign the ELB a public Elastic IP address.
+Other cloud providers: Create a cluster of virtual machines according to your cloud provider's documentation.
+Automate the provisioning of an EC2 instance using Ansible
+Create an Ansible playbook to provision an EC2 instance.
+In the playbook, specify the following:
+The AMI to use
+The instance type
+The security group
+The key pair
+The user data script
+Install Docker and Kubernetes on the cluster
+Docker: Install Docker on each node in the cluster.
+Kubernetes: Install Kubernetes on each node in the cluster.
+Implement the network policies at the database pod to allow ingress traffic from the front-end application pod
+Create a Kubernetes network policy to allow ingress traffic from the front-end application pod to the database pod.
+Create a new user with permissions to create, list, get, update, and delete pods
+Create a new Kubernetes user account with permissions to create, list, get, update, and delete pods.
+Configure application on the pod
+Deploy the e-commerce application to the Kubernetes cluster.
+Take snapshot of ETCD database
+Take a snapshot of the ETCD database to protect the application's state.
+Set criteria such that if the memory of CPU goes beyond 50%, environments automatically get scaled up and configured
+Use a Kubernetes HorizontalPodAutoscaler (HPA) to scale the e-commerce application pods up or down based on CPU utilization.
+Tools
+
+EC2
+Kubernetes
+Docker
+Ansible
+Steps
+
+Create an AWS account or an account with another cloud provider.
+Create an EC2 instance or a cluster of virtual machines.
+Install Docker and Kubernetes on the cluster.
+Create an Ansible playbook to provision an EC2 instance.
+Create a Kubernetes network policy to allow ingress traffic from the front-end application pod to the database pod.
+Create a new Kubernetes user account with permissions to create, list, get, update, and delete pods.
+Deploy the e-commerce application to the Kubernetes cluster.
+Take a snapshot of the ETCD database.
+Use a Kubernetes HorizontalPodAutoscaler (HPA) to scale the e-commerce application pods up or down based on CPU utilization.
+Algorithms
+
+The following algorithms can be used to implement the DevOps infrastructure for the e-commerce application in high-availability mode:
+
+Round robin load balancing: This algorithm distributes traffic evenly across the EC2 instances in the cluster.
+Least connections load balancing: This algorithm distributes traffic to the EC2 instance in the cluster with the fewest number of connections.
+Weighted round robin load balancing: This algorithm distributes traffic to the EC2 instances in the cluster based on a weight that is assigned to each instance.
+Kubernetes HorizontalPodAutoscaler (HPA): This algorithm scales the e-commerce application pods up or down based on CPU utilization.
+GitHub Repository Link
+
+[Insert GitHub repository link here]
+
+Test Cases
+
+The following test cases can be used to verify the functionality of the DevOps infrastructure for the e-commerce application in high-availability mode:
+
+Test that the application is accessible through the ELB.
+Test that the application continues to be accessible even if one of the EC2 instances in the cluster fails.
+Test that the application is able to scale up and down based on CPU utilization.
+Conclusion
+
+The DevOps infrastructure described above will allow the e-commerce application to run in high-availability mode. This means that the application will be accessible to users even if one or more of the components in the infrastructure fail. The infrastructure is also scalable, so it can be scaled up or down to meet the demands of the application.
+
+USPs (Unique Selling Points)
+
+High availability: The application will be accessible to users even if one or more of the components in the infrastructure fail.
+Scalability: The infrastructure can be scaled up or down to meet the demands of the application.
+Automation: The provisioning and configuration of the infrastructure is automated,

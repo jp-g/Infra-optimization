@@ -1,0 +1,29 @@
+To create a DevOps infrastructure for an e-commerce application to run on high-availability mode, the following steps can be taken:
+
+    Create an AWS account and set up a VPC (Virtual Private Cloud) with public and private subnets.
+    Launch EC2 instances in the private subnets and install Docker and Kubernetes on them.
+    Create a load balancer and assign an elastic IP address to it.
+    Configure the load balancer to distribute traffic to the EC2 instances.
+    Use Ansible or Chef or Puppet to automate the provisioning of an EC2 instance.
+    Implement network policies at the database pod to allow ingress traffic from the front-end application pod.
+    Create a new user with permissions to create, list, get, update, and delete pods.
+    Configure the application on the pod.
+    Take a snapshot of the ETCD database.
+    Set criteria such that if the memory or CPU goes beyond 50%, environments automatically get scaled up and configured.
+
+The following tools can be used for this implementation:
+
+    EC2
+    Kubernetes
+    Docker
+    Ansible or Chef or Puppet
+
+To document the steps and write the algorithms, a GitHub repository can be created to track the tasks. The step-by-step process starting from creating test cases, executing them, and recording the results should be documented. The final specification document should include project and tester details, concepts used in the project, links to the GitHub repository to verify the project completion, and the conclusion on enhancing the application and defining the USPs. Some useful resources for designing a highly available infrastructure for an e-commerce application are:
+
+    "DevOps and High Availability When Deploying with AWS"1
+    "Designing Highly Available Infrastructure"2
+    "DevOps Project Part-1 | Setting up CI-CD Pipeline for an E-Commerce App"3
+    "DevOps for E-commerce Businesses"4
+    "Using Load Balancing for Highly Available Applications"6
+
+These resources provide insights into the best practices for designing a highly available infrastructure, including the use of load balancing, automation tools, and cloud services.

@@ -51,7 +51,6 @@ Weighted round robin load balancing: This algorithm distributes traffic to the E
 Kubernetes HorizontalPodAutoscaler (HPA): This algorithm scales the e-commerce application pods up or down based on CPU utilization.
 GitHub Repository Link
 
-[Insert GitHub repository link here]
 
 Test Cases
 
